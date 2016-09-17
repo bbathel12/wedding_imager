@@ -5,7 +5,7 @@ function getRandomInt(min, max) {
 
 
 function imager(){
-
+    
 	this.images_by_size = [];
 	this.images_125 = [];
 	this.images_1   = [];
@@ -15,24 +15,40 @@ function imager(){
 	this.max  = 350/2;
 	this.update_images = function(data){
 		//var $images = $('img');
-		//console.log(data)
+		console.log(data)
 		var $img_125 = $('div.image_column:nth-child(odd) img');
 		var $img_67  = $('div.image_column:nth-child(even) img ');
-		for(var i = 0; i < data.length ;i++){
+		/*for(var i = 0; i < data.length ;i++){
 			 this.sort_images(data[i]);
 		}
 		for(var i = 0; i < this.images_125.length && i < 100; i++){
 			console.log(125)
-			$($img_125[i]).attr('src',this.images_125[getRandomInt(this.min, this.images_125.length-1)].src);
+			$img_number = getRandomInt(this.min, this.images_125.length-1);
+			$($img_125[i]).fadeOut(0).attr('src',this.images_125[$img_number].src).fadeIn(1500);
+			$($img_125[i]).siblings().find('.caption').html(this.images_125[$img_number].content).fadeIn(1500)
 		}
 		for(var i = 0; i < this.images_67.length&& i < 100 ; i++){
 			console.log(67)
-			$($img_67[i]).attr('src',this.images_67[getRandomInt(this.min, this.images_67.length-1)].src);
+			$($img_67[i]).fadeOut(0).attr('src',this.images_67[getRandomInt(this.min, this.images_67.length-1)].src).fadeIn(750);
 		}
+        for(var i = 0; i < this.images_1.length&& i < 100 ; i++){
+			console.log(67)
+			$($img_67[i]).fadeOut(0).attr('src',this.images_67[getRandomInt(this.min, this.images_67.length-1)].src).fadeIn(750);
+		}
+        console.log(this.images_123);
+        console.log(this.images_67)
 		this.images_67=[];
-		this.images_125=[]
-		/*
-		$('.image_holder:nth-child(odd) img').each(
+		this.images_125=[];
+		this.images_1=[];*/
+        
+		
+        for(var i = 0; i < data.length && i < 100 ; i++){
+			console.log(67)
+			$($img_67[i]).fadeOut(0).attr('src',data[getRandomInt(this.min, data.length-1)].src).fadeIn(750);
+            $($img_125[i]).addClass('rotate').attr('src',data[getRandomInt(this.min, data.length-1)].src).fadeIn(1500).removeClass('rotate');
+            
+		}
+		/*$('.image_holder:nth-child(odd) img').each(
 			function(index){
 				$(this).attr('src',this.images_125[index]);
 			})
@@ -73,8 +89,9 @@ var images;
 var updater;
 $(document).ready(
 	function(){
-		$.getJSON('http://amberandbrice.com/wedding_imager/get_tags.php',function(data){window.images = data; wedding_imager.update_images(images);var updater = setInterval(
-	function(){wedding_imager.update_images(images);},10000)})
+		$.getJSON('http://amberandbrice.com/wedding_imager/get_tags.php',
+                  function(data){window.images = data; wedding_imager.update_images(images);var updater = setInterval(
+                    function(){wedding_imager.update_images(images);},10000)})
 	}
 )
 

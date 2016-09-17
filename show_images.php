@@ -15,12 +15,15 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>	
 
 		<link rel="stylesheet" href="./css/all.css">
 
 		<meta charset="utf-8">
 	</head>
 	<body class='fluid-container'>
+		<div id="border"></div>
 		<!--<div class="image_holder" height="250" width="250">
 			<img class="img-responsive"  id="i1" src="https://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/13532038_101034960332823_565588599_n.jpg?ig_cache_key=MTI4NTg0OTU2OTQ1NTc5NTIwOQ%3D%3D.2" height="250" width="250">
 			<p class="caption">Hoje foi dia do nosso novo casal Flavia e Felipe, será um prazer fazer parte do sonho de vocês!!! #ReFassessoria #AssessoriaReF #CasamentoFlaviaeFelipe #CasandonoGrandMercure #grandmercureibirapuera #wedding #weddingplanners #casamento #assessoriadecasamento</p>
